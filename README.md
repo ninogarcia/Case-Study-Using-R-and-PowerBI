@@ -52,7 +52,7 @@ View(attrition_data)
 ```
 ## PROCESS
 
-###Data Cleaning before conducting analysis
+### Data Cleaning before conducting analysis
 
 Delete duplicate rows
 ```r
