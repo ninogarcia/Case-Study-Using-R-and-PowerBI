@@ -56,11 +56,7 @@ View(attrition_data)
 
 Delete duplicate rows
 ```r
-remove_dup_rows <- function(df) {
-  df_row <- unique(df)
-  return(df_row)
-}
-attrition_data <- remove_dup_rows(data)
+attrition_data_unique <- distinct(attrition_data)
 ```
 
 Check for missing values
