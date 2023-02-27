@@ -39,7 +39,7 @@ library(tidyverse)
 library(skimr)
 library(dplyr)
 ```
-Load Datasheet
+Load Dataset
 ```r
 attrition_data <- read_csv("...\\watson_healthcare_modified.csv")
 ```
@@ -49,4 +49,14 @@ Check the Data Frame
 head(attrition_data)
 glimpse(attrition_data)
 View(attrition_data)
+```
+## PROCESS
+
+Delete duplicate rows
+```r
+remove_dup_rows <- function(df) {
+  df_row <- unique(df)
+  return(df_row)
+}
+attrition_data <- remove_dup_rows(data)
 ```
