@@ -68,9 +68,23 @@ Check for missing values
 colSums(is.na(attrition_data))
 ```
 
-Dropping columns which are not needed
+### Adding new columns that can be used for aggregate functions
+
+Create attrition count column
 ```r
-attrition_data <- attrition_data[, !(colnames(attrition_data) %in% c('EmployeeID', 'DailyRate', 'HourlyRate', 'MonthlyRate', 'MaritalStatus', 'RelationshipSatisfaction'))]
+attrition_data$Attrition_Count <- as.integer(ifelse(attrition_data$Attrition == "Yes", 1, 0))
 ```
+
+Calculate the sum of Attrition_Count by department
+```r
+dept_counts <- aggregate(Attrition_Count ~ Department, data = attrition_data, FUN = sum)
+```
+
+Calculate the percentage of Attrition_Count by department
+```r
+dept_counts$Percent <- dept_counts$Attrition_Count / sum(dept_counts$Attrition_Count) * 100
+```
+
+
 
 
