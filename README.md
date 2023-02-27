@@ -29,3 +29,13 @@ This dataset contains employee and company data useful for the analysis. Attriti
 The Dataset is from [Employee Attrition for Healthcare](https://www.kaggle.com/datasets/jpmiller/employee-attrition-for-healthcare). The data has been made available by [John Miller](https://www.kaggle.com/jpmiller) under CC0: Public Domain license.
 
 ### Documentation, Cleaning and Preparation of data for analysis
+
+R Libraries that I am going to use in this project
+```r
+install.packages("tidyverse")
+install.packages("skimr")
+install.packages("dplyr")
+library(tidyverse)
+library(skimr)
+library(dplyr)
+```
