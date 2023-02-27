@@ -44,13 +44,15 @@ Load Dataset
 attrition_data <- read_csv("...\\watson_healthcare_modified.csv")
 ```
 
-Check the Data Frame
+Inspect the Data Frame
 ```r
 head(attrition_data)
 glimpse(attrition_data)
 View(attrition_data)
 ```
 ## PROCESS
+
+###Data Cleaning before conducting analysis
 
 Delete duplicate rows
 ```r
@@ -60,3 +62,15 @@ remove_dup_rows <- function(df) {
 }
 attrition_data <- remove_dup_rows(data)
 ```
+
+Check for missing values
+```r
+colSums(is.na(attrition_data))
+```
+
+Dropping columns which are not needed
+```r
+attrition_data <- attrition_data[, !(colnames(attrition_data) %in% c('EmployeeID', 'DailyRate', 'HourlyRate', 'MonthlyRate', 'MaritalStatus', 'RelationshipSatisfaction'))]
+```
+
+
