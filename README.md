@@ -30,7 +30,7 @@ The Dataset is from [Employee Attrition for Healthcare](https://www.kaggle.com/d
 
 ### Documentation, Cleaning and Preparation of data for analysis
 
-R Libraries that I am going to use in this project
+Install and load R libraries
 ```r
 install.packages("tidyverse")
 install.packages("skimr")
@@ -38,4 +38,15 @@ install.packages("dplyr")
 library(tidyverse)
 library(skimr)
 library(dplyr)
+```
+Load Datasheet
+```r
+attrition_data <- read_csv("...\\watson_healthcare_modified.csv")
+```
+
+Check the Data Frame
+```r
+head(attrition_data)
+glimpse(attrition_data)
+View(attrition_data)
 ```
