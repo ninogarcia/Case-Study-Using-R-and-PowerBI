@@ -234,7 +234,7 @@ ggplot(EducationField_sorted, aes(x = Attrition_Count, y = EducationField)) +
 
 DYNAMIC DASHBOARD THRU POWER BI
 
-I leveraged Power BI to design and develop a dynamic dashboard that presents key data in an interactive and visually appealing format. Attached in this repository is the file, and below is a screenshot of the dashboard in action.
+I leveraged Power BI to design and develop a dynamic dashboard that presents key data in an interactive and visually appealing format. To see it in action [click here](https://app.powerbi.com/view?r=eyJrIjoiMmI3MTk4OGEtOGUxYy00OGIzLThiNjktOGZkNzViODA3NzU5IiwidCI6IjQwZTNhYjgwLTIwMjQtNDVhMy1iZjc2LTdhMDc2MWEyNGQyOSIsImMiOjEwfQ%3D%3D)!
 
 ![HR ANALYTICS DASHBOARD](https://user-images.githubusercontent.com/7455410/221772410-9d5b20dc-2d45-46c5-a216-cba7e151a4a1.jpg)
 
