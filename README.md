@@ -39,6 +39,7 @@ library(tidyverse)
 library(skimr)
 library(dplyr)
 ```
+
 Load Dataset
 ```r
 attrition_data <- read_csv("...\\watson_healthcare_modified.csv")
@@ -59,6 +60,7 @@ Delete duplicate rows
 attrition_data_unique <- distinct(attrition_data)
 ```
 
+
 Check for missing values
 ```r
 colSums(is.na(attrition_data))
@@ -71,15 +73,18 @@ Create attrition count column
 attrition_data$Attrition_Count <- as.integer(ifelse(attrition_data$Attrition == "Yes", 1, 0))
 ```
 
+
 Calculate the sum of Attrition_Count by department
 ```r
 dept_counts <- aggregate(Attrition_Count ~ Department, data = attrition_data, FUN = sum)
 ```
 
+
 Calculate the percentage of Attrition_Count by department
 ```r
 dept_counts$Percent <- dept_counts$Attrition_Count / sum(dept_counts$Attrition_Count) * 100
 ```
+
 
 Create a new column 'Age_Band'
 ```r
@@ -105,6 +110,7 @@ print(summary_data1)
 ```
 `summarise()` has grouped output by 'Age_Band'
 
+
 Let's check the attrition by Department
 ```r
 summary_data2 <- attrition_data %>%
@@ -116,6 +122,7 @@ summary_data2 <- attrition_data %>%
 print(summary_data2)
 ```
 `summarise()` has grouped output by 'Department'
+
 
 Let's check the attrition by Education Field
 ```r
