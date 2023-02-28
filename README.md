@@ -251,3 +251,13 @@ I leveraged Power BI to design and develop a dynamic dashboard that presents key
 4. Younger employees (25-34) have the highest attrition rate. HR should focus on creating an inclusive and supportive work environment, providing career advancement opportunities, and offering competitive compensation packages to retain younger employees. Additionally, HR should conduct an analysis to identify the factors that drive younger employees to leave the organization, and implement appropriate measures to address those issues.
 
 By taking these actions, the organization can improve employee retention, reduce attrition rates, and foster a positive and productive work environment for all employees.
+
+## References
+
+[John Miller](https://www.kaggle.com/jpmiller) for the dataset. Thank you for providing a great dataset!
+[Dataset](https://www.kaggle.com/datasets/jpmiller/employee-attrition-for-healthcare)
+Dataset License: [CC0: Public Domain](https://creativecommons.org/publicdomain/zero/1.0/)
+
+## Contact Information
+[LinkedIn](https://www.linkedin.com/in/ninogarci/)
+[UpWork](https://www.upwork.com/freelancers/~01dd78612ac234aadd)
