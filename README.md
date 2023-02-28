@@ -156,6 +156,28 @@ print(summary_data3)
 
 ### Visualizations
 
+Attrition by Age Band
+```r
+age_band_sorted <- attrition_data %>%
+  mutate(Age_Band = factor(Age_Band, 
+                                 levels = c("Under 25", "25-34", "35-44", "45-54", "Over 55")))
+```
+```r
+ggplot(data = age_band_sorted, aes(x = Age_Band, y = Attrition_Count)) + 
+  geom_bar(stat = "identity") +
+  labs(x = "Age band", y = "Attrition count", title = "Attrition by Age Band") +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+![attrition by age band](https://user-images.githubusercontent.com/7455410/221768539-bc7f3827-cd6f-41a9-8060-5aa23e21d0fb.png)
+&nbsp;
+&nbsp;
+&nbsp;
+* Findings: The age band with the highest attrition count is 25-34, with 106 employees leaving the organization, which represents 16.67% of the total employees in that age group (106/636)
+
+&nbsp;
+&nbsp;
+&nbsp;
+
 Attrition by Department
 ```r
 ggplot(dept_counts, aes(x = "", y = Attrition_Count, fill = Department)) +
@@ -203,3 +225,8 @@ ggplot(EducationField_sorted, aes(x = Attrition_Count, y = EducationField)) +
 ![Attrition by Education Field](https://user-images.githubusercontent.com/7455410/221742290-1930f09e-5bf8-4d10-a1e8-dd55ffaccbc3.png)
 
 * Findings: The Education Field with the highest attrition count is Life Sciences with 84 employees leaving the organization, followed by Medical with 51 employees leaving, and then Marketing with 28 employees leaving. Among the Education Fields, Human Resources has the lowest attrition count with only 6 employees leaving, followed by Other with 8 employees leaving, and then Technical Degree with 22 employees leaving.
+
+&nbsp;
+&nbsp;
+&nbsp;
+
