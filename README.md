@@ -91,7 +91,7 @@ attrition_data$Age_Band <- ifelse(attrition_data$Age >= 55, 'Over 55',
 ```
 
 
-### ANALYZE
+## ANALYZE
 
 Let's check the attrition by Age Band
 ```r
