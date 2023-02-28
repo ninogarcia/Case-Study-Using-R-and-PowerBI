@@ -81,6 +81,50 @@ Calculate the percentage of Attrition_Count by department
 dept_counts$Percent <- dept_counts$Attrition_Count / sum(dept_counts$Attrition_Count) * 100
 ```
 
+Create a new column 'Age_Band'
+```r
+attrition_data$Age_Band <- ifelse(attrition_data$Age >= 55, 'Over 55',
+                                  ifelse(attrition_data$Age >= 45, '45-54',
+                                         ifelse(attrition_data$Age >= 35, '35-44',
+                                                ifelse(attrition_data$Age >= 25, '25-34',
+                                                       'Under 25'))))
+```
 
 
+### ANALYZE
 
+Let's check the attrition by Age Band
+```r
+summary_data1 <- attrition_data %>%
+  group_by(Age_Band) %>%
+  summarise(
+    Attrition_Count = sum(Attrition_Count),
+    EmployeeCount = n(),
+  )
+print(summary_data1)
+```
+`summarise()` has grouped output by 'Age_Band'
+
+Let's check the attrition by Department
+```r
+summary_data2 <- attrition_data %>%
+  group_by(Department) %>%
+  summarise(
+    Attrition_Count = sum(Attrition_Count),
+    EmployeeCount = n(),
+  )
+print(summary_data2)
+```
+`summarise()` has grouped output by 'Department'
+
+Let's check the attrition by Education Field
+```r
+summary_data3 <- attrition_data %>%
+  group_by(EducationField) %>%
+  summarise(
+    Attrition_Count = sum(Attrition_Count),
+    EmployeeCount = n(),
+  )
+print(summary_data3)
+```
+`summarise()` has grouped output by 'EducationField'
