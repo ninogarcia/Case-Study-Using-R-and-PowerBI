@@ -174,8 +174,32 @@ ggplot(dept_counts, aes(x = "", y = Attrition_Count, fill = Department)) +
         legend.title = element_text(size = 12),
         legend.text = element_text(size = 10))
  ```
+![alt text](https://github.com/ninogarcia/Google-Certificate-Case-Study-Using-R-and-PowerBI/raw/main/pie%20chart.png)
 &nbsp;
 &nbsp;
 &nbsp;
 
 * Findings: The highest attrition count is in the Maternity department with 98 employees leaving the organization, followed by Cardiology with 74 employees leaving, and then Neurology with 27 employees leaving.
+
+&nbsp;
+&nbsp;
+&nbsp;
+
+Attrition by Education Field 
+
+```r
+EducationField_sorted <- attrition_data %>%
+  mutate(EducationField = factor(EducationField, 
+                                 levels = c("Human Resources", "Other", "Technical Degree", "Marketing", "Medical", "Life Sciences")))
+```
+```r
+ggplot(EducationField_sorted, aes(x = Attrition_Count, y = EducationField)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Attrition Count by Education Field", x = "Attrition Count", y = "") +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+![alt text](https://github.com/ninogarcia/Google-Certificate-Case-Study-Using-R-and-PowerBI/raw/main/Attrition%20by%20Education%20Field.png)
+
+* Findings: The Education Field with the highest attrition count is Life Sciences with 84 employees leaving the organization, followed by Medical with 51 employees leaving, and then Marketing with 28 employees leaving. Among the Education Fields, Human Resources has the lowest attrition count with only 6 employees leaving, followed by Other with 8 employees leaving, and then Technical Degree with 22 employees leaving.
