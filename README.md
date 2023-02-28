@@ -39,11 +39,17 @@ library(tidyverse)
 library(skimr)
 library(dplyr)
 ```
+&nbsp;
+&nbsp;
+&nbsp;
 
 Load Dataset
 ```r
 attrition_data <- read_csv("...\\watson_healthcare_modified.csv")
 ```
+&nbsp;
+&nbsp;
+&nbsp;
 
 Inspect the Data Frame
 ```r
@@ -59,7 +65,9 @@ Delete duplicate rows
 ```r
 attrition_data_unique <- distinct(attrition_data)
 ```
-
+&nbsp;
+&nbsp;
+&nbsp;
 
 Check for missing values
 ```r
@@ -72,19 +80,25 @@ Create attrition count column
 ```r
 attrition_data$Attrition_Count <- as.integer(ifelse(attrition_data$Attrition == "Yes", 1, 0))
 ```
-
+&nbsp;
+&nbsp;
+&nbsp;
 
 Calculate the sum of Attrition_Count by department
 ```r
 dept_counts <- aggregate(Attrition_Count ~ Department, data = attrition_data, FUN = sum)
 ```
-
+&nbsp;
+&nbsp;
+&nbsp;
 
 Calculate the percentage of Attrition_Count by department
 ```r
 dept_counts$Percent <- dept_counts$Attrition_Count / sum(dept_counts$Attrition_Count) * 100
 ```
-
+&nbsp;
+&nbsp;
+&nbsp;
 
 Create a new column 'Age_Band'
 ```r
@@ -108,8 +122,9 @@ summary_data1 <- attrition_data %>%
   )
 print(summary_data1)
 ```
-`summarise()` has grouped output by 'Age_Band'
-
+&nbsp;
+&nbsp;
+&nbsp;
 
 Let's check the attrition by Department
 ```r
@@ -121,8 +136,9 @@ summary_data2 <- attrition_data %>%
   )
 print(summary_data2)
 ```
-`summarise()` has grouped output by 'Department'
-
+&nbsp;
+&nbsp;
+&nbsp;
 
 Let's check the attrition by Education Field
 ```r
@@ -134,4 +150,32 @@ summary_data3 <- attrition_data %>%
   )
 print(summary_data3)
 ```
-`summarise()` has grouped output by 'EducationField'
+&nbsp;
+&nbsp;
+&nbsp;
+
+### Visualizations
+
+Attrition by Department
+```r
+ggplot(dept_counts, aes(x = "", y = Attrition_Count, fill = Department)) +
+  geom_bar(width = 1, stat = "identity") +
+  coord_polar(theta = "y") +
+  geom_text(aes(label = paste0(Attrition_Count, "\n", paste0("(", round(Percent, 2), "%", ")"))),
+            position = position_stack(vjust = 0.5)) +
+  labs(fill = "Department", title = "Attrition Counts by Department (Pie Chart)") +
+  theme_void() +
+  theme(legend.position = "right",
+        axis.title = element_blank(),
+        axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid = element_blank(),
+        plot.title = element_text(hjust = 0.5, size = 18),
+        legend.title = element_text(size = 12),
+        legend.text = element_text(size = 10))
+ ```
+&nbsp;
+&nbsp;
+&nbsp;
+
+* Findings: The highest attrition count is in the Maternity department with 98 employees leaving the organization, followed by Cardiology with 74 employees leaving, and then Neurology with 27 employees leaving.
