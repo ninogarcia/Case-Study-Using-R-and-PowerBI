@@ -1,4 +1,4 @@
-# Google Certificate Case Study
+# Google Certificate Case Study - Employee Attrition for Healthcare
 
 ## Introduction
 This exploratory analysis case study is towards Capstome project requirement for Google Data Analytics Professional Certificate. The case study involves a Dataset of Employee Attrition for Healthcare.
@@ -230,3 +230,24 @@ ggplot(EducationField_sorted, aes(x = Attrition_Count, y = EducationField)) +
 &nbsp;
 &nbsp;
 
+### Additional Visualization
+
+DYNAMIC DASHBOARD THRU POWER BI
+
+I leveraged Power BI to design and develop a dynamic dashboard that presents key data in an interactive and visually appealing format. Attached in this repository is the file, and below is a screenshot of the dashboard in action.
+
+![HR ANALYTICS DASHBOARD](https://user-images.githubusercontent.com/7455410/221772410-9d5b20dc-2d45-46c5-a216-cba7e151a4a1.jpg)
+
+## ACT
+
+### Recommendations:
+
+1. Maternity and Cardiology departments have the highest attrition counts. HR should conduct an analysis to identify the root causes of the high attrition rates, and take appropriate actions to address those issues. For example, HR can implement retention programs, offer flexible work arrangements, provide adequate training and development opportunities, and improve communication with employees.
+
+2. Life Sciences and Medical Education Fields have the highest attrition counts. HR should analyze the reasons behind the high attrition rates in these fields, and take measures to address the underlying causes. For instance, HR can provide more opportunities for career development, offer competitive compensation packages, and foster a positive work environment.
+
+3. Human Resources, Other, and Technical Degree Education Fields have the lowest attrition counts. HR should investigate the reasons behind the low attrition rates in these fields and leverage them to improve employee retention in other departments and education fields. HR can identify and implement best practices, such as providing a supportive work environment, offering opportunities for learning and growth, and recognizing employee achievements.
+
+4. Younger employees (25-34) have the highest attrition rate. HR should focus on creating an inclusive and supportive work environment, providing career advancement opportunities, and offering competitive compensation packages to retain younger employees. Additionally, HR should conduct an analysis to identify the factors that drive younger employees to leave the organization, and implement appropriate measures to address those issues.
+
+By taking these actions, the organization can improve employee retention, reduce attrition rates, and foster a positive and productive work environment for all employees.
