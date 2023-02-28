@@ -255,9 +255,15 @@ By taking these actions, the organization can improve employee retention, reduce
 ## References
 
 [John Miller](https://www.kaggle.com/jpmiller) for the dataset. Thank you for providing a great dataset!
+&nbsp;
+
 [Dataset](https://www.kaggle.com/datasets/jpmiller/employee-attrition-for-healthcare)
+&nbsp;
+
 Dataset License: [CC0: Public Domain](https://creativecommons.org/publicdomain/zero/1.0/)
 
 ## Contact Information
 [LinkedIn](https://www.linkedin.com/in/ninogarci/)
+&nbsp;
+
 [UpWork](https://www.upwork.com/freelancers/~01dd78612ac234aadd)
