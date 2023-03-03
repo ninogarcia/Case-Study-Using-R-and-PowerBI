@@ -7,7 +7,7 @@ The analysis will follow the 6 phases of the Data Analysis process: Ask, Prepare
 
 ## ASK
 
-Task: Analyze employee attrition rates by department, educational field, age group, and gender to identify patterns and develop retention strategies.
+Task: Analyze employee attrition rates by department, educational field, age group, and gender to identify patterns and to help HR develop retention strategies.
 
 Description: To address the issue of employee attrition, we need to analyze the attrition rates of each department, educational field, age group, and gender to identify patterns and develop targeted retention strategies.
 
