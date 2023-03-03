@@ -1,4 +1,4 @@
-# Google Certificate Case Study - Employee Attrition for Healthcare Using-R-and-PowerBI
+# Google Certificate Case Study - Employee Attrition for Healthcare Using R and PowerBI
 
 ## Introduction
 This exploratory analysis case study is towards Capstone project requirement for Google Data Analytics Professional Certificate. The case study involves a Dataset of Employee Attrition for Healthcare.
