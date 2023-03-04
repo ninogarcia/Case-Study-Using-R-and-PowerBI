@@ -240,6 +240,10 @@ I leveraged Power BI to design and develop a dynamic dashboard that presents key
 
 ## ACT
 
+### Conclusion:
+
+The organization has a significant issue with employee attrition, particularly in the Maternity, Cardiology, Life Sciences, and Medical Education departments. Additionally, younger employees (25-34) are leaving the organization at a higher rate than other age groups.
+
 ### Recommendations:
 
 1. Maternity and Cardiology departments have the highest attrition counts. HR should conduct an analysis to identify the root causes of the high attrition rates, and take appropriate actions to address those issues. For example, HR can implement retention programs, offer flexible work arrangements, provide adequate training and development opportunities, and improve communication with employees.
