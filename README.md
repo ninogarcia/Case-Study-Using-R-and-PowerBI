@@ -3,7 +3,7 @@
 ## Introduction
 This exploratory analysis case study is towards Capstone project requirement for Google Data Analytics Professional Certificate. The case study involves a Dataset of Employee Attrition for Healthcare.
 
-The analysis will follow the 6 phases of the Data Analysis process: Ask, Prepare, Analyze, and Act (APAA).
+The analysis will follow the 6 phases of the Data Analysis process: Ask, Prepare, Process, Analyze, and Act (APPAA).
 
 ## ASK
 
@@ -27,6 +27,8 @@ ABOUT THE DATASET:
 This dataset contains employee and company data useful for the analysis. Attrition - whether an employee left or not - is included and can be used as the target variable. The data is synthetic and based on the IBM Watson dataset for attrition. Employee roles and departments were changed to reflect the healthcare domain. 
 
 The Dataset is from [Employee Attrition for Healthcare](https://www.kaggle.com/datasets/jpmiller/employee-attrition-for-healthcare). The data has been made available by [John Miller](https://www.kaggle.com/jpmiller) under CC0: Public Domain license.
+
+## PROCESS
 
 ### Documentation, Cleaning and Preparation of data for analysis
 
